@@ -12,7 +12,8 @@
     <script src="/js/agendamento.js"></script>
  
 </head>
-<body>
+<body onload="obterAgencias()">
+    
     <div class="container h-100 d-flex"> <!-- ocupar toda a página, centralizada na vertical -->
         <div class="row w-100 align-items-center"> <!-- ocupa toda a largula centralizando o conteúdo -->
             <div class="col-8 mx-auto"> <!-- uma única coluna ocupando 8 dos 12 espaços, centralizada  -->
@@ -23,14 +24,31 @@
                             <div class="text-center" id="msgErro"></div>
                         </div>
                     </div>
+
+                    <h1 style="color: orangered;"> Coronagenda</h1>
+                    <h4> Seu jeito seguro de ir a agência. </h4>
+                    <br><br>
  
                     <form>
+                        <p>Nome</p>
                         <input class="form-control" type="text" id="txtCliente" placeholder="Nome cliente">
+                        
+                        <p>E-mail</p>
                         <input class="form-control" type="text" id="txtEmail" placeholder="E-mail">
+                        
+                        <p>Celular</p>
                         <input class="form-control" type="text" id="txtCellWpp" placeholder="Celular / Whatsapp">
+                        
+                        <p>Data de Agendamento</p>
                         <input class="form-control" type="text" id="txtData" placeholder="Data">
-                        <input class="form-control" type="text" id="txtAgencia" placeholder="Agência">
-                        <input class="form-control" type="text" id="txtHoraInicio" placeholder="Hora Início">
+
+                        <p>Hora de Agendamento</p>
+                        <input class="form-control" type="text" id="txtHoraInicio" placeholder="00:00">
+                        
+                        <p>Agência</p>
+                        <div class="col-4">
+                            <select id="sel_agencias"></select>  
+                        </div>
                         <div class="col text-center">
                             <button class="btn btn-outline-primary" onclick="cadastrar(event)"> Cadastrar</button>
                         </div>
