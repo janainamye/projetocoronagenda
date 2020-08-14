@@ -5,7 +5,6 @@ function cadastrar(event) {
     let email=document.getElementById("txtEmail");
     let cellWpp=document.getElementById("txtCellWpp");
     let data=document.getElementById("txtData");
-    ("#data").datepicker({ minDate: 0});
 
     let agencia=document.getElementById("txtAgencia");
     let horaInicio=document.getElementById("txtHoraInicio");
