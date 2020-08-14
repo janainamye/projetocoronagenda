@@ -1,7 +1,8 @@
 package br.gama.projagenda.model;
 
-import java.sql.Time;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,10 +34,10 @@ public class Agendamento {
     private String celular;
     
     @Column(name="data_agendamento")
-    private Date dataAgendamento;
+    private LocalDate dataAgendamento;
     
     @Column(name="hora_agendamento")
-    private Time horaAgendamento;
+    private LocalTime horaAgendamento;
     
     @Column(name="observacao", length=255)
     private String observacao;
@@ -78,19 +79,19 @@ public class Agendamento {
 		this.celular = celular;
 	}
 
-	public Date getDataAgendamento() {
+	public LocalDate getDataAgendamento() {
 		return dataAgendamento;
 	}
 
-	public void setDataAgendamento(Date dataAgendamento) {
+	public void setDataAgendamento(LocalDate dataAgendamento) {
 		this.dataAgendamento = dataAgendamento;
 	}
 
-	public Time getHoraAgendamento() {
+	public LocalTime getHoraAgendamento() {
 		return horaAgendamento;
 	}
 
-	public void setHoraAgendamento(Time horaAgendamento) {
+	public void setHoraAgendamento(LocalTime horaAgendamento) {
 		this.horaAgendamento = horaAgendamento;
 	}
 
@@ -110,5 +111,6 @@ public class Agendamento {
 		this.agencia = agencia;
 	}
 
+	
     
 }

@@ -39,7 +39,12 @@ public class AgendamentoController {
         return  lista;
     }
 
-/*  falta listar por agencia
-    falta listar por data */
+    @GetMapping("/agendamento/agencia/{id}")
+    public List<Agendamento> getAgenciaId(@PathVariable int id){
+        List<Agendamento> lista = (List<Agendamento>) dao.findByAgenciaId(id);
+        return  lista;
+    }
+
+    /*falta listar por data */
 
 }
