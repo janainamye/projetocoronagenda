@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AgendaApplication<projagenda>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.gama.projagenda.AgendaApplication",
+            "projectName": "projagenda",
+            "args": ""
+        }
+    ]
+}
